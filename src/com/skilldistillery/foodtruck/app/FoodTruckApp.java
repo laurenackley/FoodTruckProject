@@ -5,7 +5,7 @@ import com.skilldistillery.foodtruck.entities.FoodTruck;
 public class FoodTruckApp {
 	java.util.Scanner sc = new java.util.Scanner(System.in);
 
-	private FoodTruck[] FleetTrucks = new FoodTruck[5];
+	private FoodTruck[] fleetTrucks = new FoodTruck[5];
 	private String name;
 
 	public static void main(String[] args) {
@@ -47,7 +47,7 @@ public class FoodTruckApp {
 
 //If user enters quit then it needs to end immediately but program continues
 			FoodTruck truck = new FoodTruck(name, ratingNum, foodType);
-			FleetTrucks[i] = truck;
+			fleetTrucks[i] = truck;
 		}
 	}
 
@@ -63,9 +63,9 @@ public class FoodTruckApp {
 			sc.nextLine();
 			switch (choice) {
 			case 1:
-				for (int i = 0; i < FleetTrucks.length; i++) {
-					if (FleetTrucks[i] != null) {
-						System.out.println(FleetTrucks[i].toString());
+				for (int i = 0; i < fleetTrucks.length; i++) {
+					if (fleetTrucks[i] != null) {
+						System.out.println(fleetTrucks[i].toString());
 						System.out.println("---------------------------------------------------------");
 					}
 				}
@@ -74,9 +74,9 @@ public class FoodTruckApp {
 				double number = 0;
 				double numOfTrucks = 0;
 				double average = 0;
-				for (int i = 0; i < FleetTrucks.length; i++) {
-					if (FleetTrucks[i] != null) {
-						number += (FleetTrucks[i].getRatingNum());
+				for (int i = 0; i < fleetTrucks.length; i++) {
+					if (fleetTrucks[i] != null) {
+						number += (fleetTrucks[i].getRatingNum());
 						numOfTrucks++;
 					} 
 				}
@@ -91,13 +91,13 @@ public class FoodTruckApp {
 				String nameOfHighest = null;
 				int highest = 0;
 	
-				for (int i = 0; i < FleetTrucks.length; i++) {
-					if (FleetTrucks[i] != null) {
-						ratings = FleetTrucks[i].getRatingNum();
+				for (int i = 0; i < fleetTrucks.length; i++) {
+					if (fleetTrucks[i] != null) {
+						ratings = fleetTrucks[i].getRatingNum();
 						numTrucks++;
 						if (ratings > highest) {
 							highest = ratings;
-							nameOfHighest = FleetTrucks[i].toString();
+							nameOfHighest = fleetTrucks[i].toString();
 						}
 						}
 				}
