@@ -36,7 +36,7 @@ public class FoodTruckApp {
 				}
 			}
 			System.out.println("What would you rate them out of 5? You can use decimals if you would like.");
-			int ratingNum = sc.nextInt();
+			double ratingNum = sc.nextDouble();
 			sc.nextLine();
 
 			System.out.println("What type of food does " + name + " serve?");
@@ -86,10 +86,10 @@ public class FoodTruckApp {
 				break;
 
 			case 3:
-				int ratings = 0;
+				double ratings = 0;
 				int numTrucks = 0;
 				String nameOfHighest = null;
-				int highest = 0;
+				double highest = 0;
 	
 				for (int i = 0; i < fleetTrucks.length; i++) {
 					if (fleetTrucks[i] != null) {

@@ -3,14 +3,14 @@ package com.skilldistillery.foodtruck.entities;
 public class FoodTruck {
 	private static int numberOfTrucks = 0; // don't pass as a ID field ONLY other static 
 	private String name; 
-	private int ratingNum;
+	private double ratingNum;
 	private String foodType;
 	private int truckID;
 	
 	public FoodTruck() {
 	}
 	
-	public FoodTruck (String name, int ratingNum, String foodType) {
+	public FoodTruck (String name, double ratingNum, String foodType) {
 		this.name = name;
 		this.ratingNum = ratingNum;
 		this.foodType = foodType;
@@ -42,11 +42,11 @@ public class FoodTruck {
 		this.name = name;
 	}
 
-	public int getRatingNum() {
+	public double getRatingNum() {
 		return ratingNum;
 	}
 
-	public void setRatingNum(int ratingNum) {
+	public void setRatingNum(double ratingNum) {
 		this.ratingNum = ratingNum;
 	}
 
