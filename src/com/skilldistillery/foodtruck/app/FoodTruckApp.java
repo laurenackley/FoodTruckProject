@@ -10,8 +10,8 @@ public class FoodTruckApp {
 
 	public static void main(String[] args) {
 		// that is the only static allowed in the project.
-		System.out.println("Welcome to the food truck app where you can store information about food trucks"+
-		"then compare them."); 
+		System.out.println("Welcome to the food truck app where you can store information about food trucks"
+				+ "then compare them.");
 		FoodTruckApp fTA = new FoodTruckApp();
 		fTA.TruckData();
 		fTA.MenuChoices();
@@ -78,7 +78,7 @@ public class FoodTruckApp {
 					if (fleetTrucks[i] != null) {
 						number += (fleetTrucks[i].getRatingNum());
 						numOfTrucks++;
-					} 
+					}
 				}
 				average = number / numOfTrucks;
 				System.out.println("The average rating of all the food trucks is " + average);
@@ -90,7 +90,7 @@ public class FoodTruckApp {
 				int numTrucks = 0;
 				String nameOfHighest = null;
 				double highest = 0;
-	
+
 				for (int i = 0; i < fleetTrucks.length; i++) {
 					if (fleetTrucks[i] != null) {
 						ratings = fleetTrucks[i].getRatingNum();
@@ -99,7 +99,7 @@ public class FoodTruckApp {
 							highest = ratings;
 							nameOfHighest = fleetTrucks[i].toString();
 						}
-						}
+					}
 				}
 
 				System.out.println("The highest rated food truck is " + nameOfHighest);
